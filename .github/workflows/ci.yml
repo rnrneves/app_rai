@@ -17,3 +17,15 @@ jobs:
     run: npm install
   - name: Run tests
     run: npm test
+    
+ deploy-dev:
+  runs-on: ubuntu-latest
+  environment:
+   name: dev
+   url: 'www.minhapp.com'
+  needs: build
+  steps:
+   - name: Run a one-line script
+     run: echo Deploy Dev
+ 
+    
